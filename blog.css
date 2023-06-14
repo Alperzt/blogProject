@@ -1,3 +1,256 @@
+:root{
+    --template-bg:#212529;
+    --template-color:white;
+    --parag-color:rgb(183, 183, 190);
+}
+
+/* ### Common Property*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 15px;
+    
+}
+
 body{
     position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Ubuntu', sans-serif;
+
+    font-size: 1.3rem; /* 15 * 1.3 = x */ 
+    background-color: var(--template-bg);
+    color: var(--template-color);
 }
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+i{
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+/* image */
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+
+/* paragraf */
+p{
+    color: var(--parag-color);
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin: 0.4rem .5rem;
+}
+
+/* clear fix*/
+.myClearFix ::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* LİNE CLAMP ==> satır sayısı seç, o sayıdan sonra 3 nokta göstersin*/
+.lineClamp4{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lineClamp6{
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lineClamp8{
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* #logo{
+    height: 3rem;
+}
+#navbar{
+    position: fixed;
+    top: 10;
+    width: 100%;
+}
+
+
+#searchButton i{
+    margin-right: 0;
+    font-size: 1rem;
+    margin-top: .3rem ;
+}
+#searchButton{
+    vertical-align: middle;
+}
+#searchInput{
+    width: 10rem;
+    height: 2rem;
+    margin-top: .3rem;
+    margin-right: .3rem ;
+}
+
+#navbarId{
+    padding: 1.5rem 2rem;
+    background-color: white;
+    margin-top: 5rem;
+    border-radius: 10rem;
+    height: 6rem;
+}
+
+.buttons{
+    float: right;
+}
+.buttons .menu{
+    display: none;
+}
+.buttons button{
+    margin-top: .5rem;
+    margin-left: 1rem;
+    background-color: white;
+    border: none;
+}
+
+.buttons button i {
+    font-size: 1.5rem;
+}
+.collapsible {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid black;
+}
+.collapsible a{
+    margin-left: 4rem;
+    border-bottom: 0.1rem solid white;
+}
+.collapsible a:hover{
+    color: black;
+    border-color: salmon;
+    border-bottom: 2px solid salmon;
+    padding-bottom: 0.2rem;
+    transition: .2s;
+}
+@media (max-width: 947px) {
+    
+} */
+#logIn{
+    font-size: 1rem!important;
+    width: 4rem;
+    color: gray;
+    padding-top: 25px;
+    margin-left: 2rem;
+    float: right;
+}
+
+#logIn:hover{
+    color: black;
+    transition: 1s all;
+}
+#navbarId{
+    background-color: white;
+    max-width: 1200px;
+    margin: auto;
+    height: 5rem;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.logo{
+    padding: 10px 0px;
+    float: left;
+    
+}
+#logo{
+    height: 3.5rem;
+    border: 1px solid black;
+}
+.collapsible{
+    align-items: center;
+    display: flex;
+    float: left;
+    min-height: 5rem;
+}
+.collapsible a{
+    text-transform: uppercase;
+    margin-left: 2rem;
+    border-bottom: .1rem solid transparent;
+}
+.collapsible a:hover{
+    transition: .2s;
+    color: black;
+    border-color: red;
+    
+}
+#collapseButton,#searchButton{
+    float: right;
+    background-color: white;
+    border: none;
+    height: 5rem;
+    margin-right: 1rem;
+}
+#collapseButton i,#searchButton i{
+    font-size: 1.5rem;
+}
+#collapseButton{
+    display: none;
+}
+@media screen and (max-width:700px) {
+    #collapseButton{
+        display: block;
+    }
+    #collapsible{
+        position: fixed;
+        border: 1px solid #eee;
+        width: 100%;
+        background-color: white;
+        max-width: 350px;
+        top: 75px;
+        right:0 ;
+        display: none;
+        box-sizing: border-box;
+        padding-left: 0;
+        transition: display 3s ease;
+    }
+    #collapsible a{
+        float: left;
+        padding: 10px;
+        color: black;
+        display: block;
+        width: 400px;
+        margin-left: 0;
+    }
+    #collapsible a:hover{
+        border-bottom: none;
+        border: 1px solid black;
+        transition: .5s;
+    }
+    #collapsible.active{
+        display: block;
+    }
+}
+
